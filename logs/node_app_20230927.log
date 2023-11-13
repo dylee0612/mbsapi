@@ -1,0 +1,180 @@
+2023-09-27 09:55:42.934 [info] select 
+  c.id,
+  c.event_time,
+  c.iud_type,
+  c.key as receipt_no, 
+  a.album_name, 
+  a.artist as album_artist, 
+  a.release_year as album_release_year,
+  b1.attach_path||'\'||b1.attach_name AS image_path,
+  b2.attach_path||'\'||b2.attach_name AS small_image_path,
+  a.title_song,
+  a.LABEL_NO,
+  a.album_type,
+  a.PRODUCER,
+  a.PLANNER,
+  a.ALBUM_PLACE,
+  a.REMARK_EXT,
+  MUSIC.FNC_GENRENM('M', INTEGER(DECODE(LENGTH(a.genre),'0','0',a.genre)) ) AS genre_nm,
+  a.open_dt,
+  a.brd_time,
+  a.status
+  from music.album_mst a
+  left outer join  music.album_image b1
+  on a.receipt_no = b1.receipt_no and b1.img_type='001'
+  left outer join  music.album_image b2
+  ON a.receipt_no = b2.receipt_no and b2.img_type='002'
+  right outer join  music.ai_album_log c
+  ON  a.receipt_no = c.key
+  where c.id >= 60000
+  order by c.id asc (in selectalbum.js:50)
+2023-09-27 09:55:53.030 [info] select 
+  c.id,
+  c.event_time,
+  c.iud_type,
+  c.key as receipt_no, 
+  a.album_name, 
+  a.artist as album_artist, 
+  a.release_year as album_release_year,
+  b1.attach_path||'\'||b1.attach_name AS image_path,
+  b2.attach_path||'\'||b2.attach_name AS small_image_path,
+  a.title_song,
+  a.LABEL_NO,
+  a.album_type,
+  a.PRODUCER,
+  a.PLANNER,
+  a.ALBUM_PLACE,
+  a.REMARK_EXT,
+  MUSIC.FNC_GENRENM('M', INTEGER(DECODE(LENGTH(a.genre),'0','0',a.genre)) ) AS genre_nm,
+  a.open_dt,
+  a.brd_time,
+  a.status
+  from music.album_mst a
+  left outer join  music.album_image b1
+  on a.receipt_no = b1.receipt_no and b1.img_type='001'
+  left outer join  music.album_image b2
+  ON a.receipt_no = b2.receipt_no and b2.img_type='002'
+  right outer join  music.ai_album_log c
+  ON  a.receipt_no = c.key
+  where c.id >= 50000
+  order by c.id asc (in selectalbum.js:50)
+2023-09-27 09:56:06.693 [info] select 
+  c.id,
+  c.event_time,
+  c.iud_type,
+  c.key as receipt_no, 
+  a.album_name, 
+  a.artist as album_artist, 
+  a.release_year as album_release_year,
+  b1.attach_path||'\'||b1.attach_name AS image_path,
+  b2.attach_path||'\'||b2.attach_name AS small_image_path,
+  a.title_song,
+  a.LABEL_NO,
+  a.album_type,
+  a.PRODUCER,
+  a.PLANNER,
+  a.ALBUM_PLACE,
+  a.REMARK_EXT,
+  MUSIC.FNC_GENRENM('M', INTEGER(DECODE(LENGTH(a.genre),'0','0',a.genre)) ) AS genre_nm,
+  a.open_dt,
+  a.brd_time,
+  a.status
+  from music.album_mst a
+  left outer join  music.album_image b1
+  on a.receipt_no = b1.receipt_no and b1.img_type='001'
+  left outer join  music.album_image b2
+  ON a.receipt_no = b2.receipt_no and b2.img_type='002'
+  right outer join  music.ai_album_log c
+  ON  a.receipt_no = c.key
+  where c.id >= 30000
+  order by c.id asc (in selectalbum.js:50)
+2023-09-27 09:57:57.753 [info] select 
+  c.id,
+  c.event_time,
+  c.iud_type,
+  c.key as receipt_no, 
+  a.album_name, 
+  a.artist as album_artist, 
+  a.release_year as album_release_year,
+  b1.attach_path||'\'||b1.attach_name AS image_path,
+  b2.attach_path||'\'||b2.attach_name AS small_image_path,
+  a.title_song,
+  a.LABEL_NO,
+  a.album_type,
+  a.PRODUCER,
+  a.PLANNER,
+  a.ALBUM_PLACE,
+  a.REMARK_EXT,
+  MUSIC.FNC_GENRENM('M', INTEGER(DECODE(LENGTH(a.genre),'0','0',a.genre)) ) AS genre_nm,
+  a.open_dt,
+  a.brd_time,
+  a.status
+  from music.album_mst a
+  left outer join  music.album_image b1
+  on a.receipt_no = b1.receipt_no and b1.img_type='001'
+  left outer join  music.album_image b2
+  ON a.receipt_no = b2.receipt_no and b2.img_type='002'
+  right outer join  music.ai_album_log c
+  ON  a.receipt_no = c.key
+  where c.id >= 36000
+  order by c.id asc (in selectalbum.js:50)
+2023-09-27 09:58:21.125 [info] select 
+  c.id,
+  c.event_time,
+  c.iud_type,
+  c.key as receipt_no, 
+  a.album_name, 
+  a.artist as album_artist, 
+  a.release_year as album_release_year,
+  b1.attach_path||''||b1.attach_name AS image_path,
+  b2.attach_path||''||b2.attach_name AS small_image_path,
+  a.title_song,
+  a.LABEL_NO,
+  a.album_type,
+  a.PRODUCER,
+  a.PLANNER,
+  a.ALBUM_PLACE,
+  a.REMARK_EXT,
+  MUSIC.FNC_GENRENM('M', INTEGER(DECODE(LENGTH(a.genre),'0','0',a.genre)) ) AS genre_nm,
+  a.open_dt,
+  a.brd_time,
+  a.status
+  from music.album_mst a
+  left outer join  music.album_image b1
+  on a.receipt_no = b1.receipt_no and b1.img_type='001'
+  left outer join  music.album_image b2
+  ON a.receipt_no = b2.receipt_no and b2.img_type='002'
+  right outer join  music.ai_album_log c
+  ON  a.receipt_no = c.key
+  where c.id >= 36000
+  order by c.id asc (in selectalbum.js:50)
+2023-09-27 09:59:11.497 [info] select 
+  c.id,
+  c.event_time,
+  c.iud_type,
+  c.key as receipt_no, 
+  a.album_name, 
+  a.artist as album_artist, 
+  a.release_year as album_release_year,
+  b1.attach_path||'''||b1.attach_name AS image_path,
+  b2.attach_path||'''||b2.attach_name AS small_image_path,
+  a.title_song,
+  a.LABEL_NO,
+  a.album_type,
+  a.PRODUCER,
+  a.PLANNER,
+  a.ALBUM_PLACE,
+  a.REMARK_EXT,
+  MUSIC.FNC_GENRENM('M', INTEGER(DECODE(LENGTH(a.genre),'0','0',a.genre)) ) AS genre_nm,
+  a.open_dt,
+  a.brd_time,
+  a.status
+  from music.album_mst a
+  left outer join  music.album_image b1
+  on a.receipt_no = b1.receipt_no and b1.img_type='001'
+  left outer join  music.album_image b2
+  ON a.receipt_no = b2.receipt_no and b2.img_type='002'
+  right outer join  music.ai_album_log c
+  ON  a.receipt_no = c.key
+  where c.id >= 36000
+  order by c.id asc (in selectalbum.js:50)

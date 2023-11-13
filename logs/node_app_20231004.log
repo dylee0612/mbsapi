@@ -1,0 +1,39 @@
+2023-10-04 14:04:10.972 [error] ReferenceError: musicdb is not defined
+    at main (E:\workspace\mediainfo\app.js:45:20)
+    at Object.<anonymous> (E:\workspace\mediainfo\app.js:31:1)
+    at Module._compile (node:internal/modules/cjs/loader:1198:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)
+    at Module.load (node:internal/modules/cjs/loader:1076:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:911:12)
+    at Module.require (node:internal/modules/cjs/loader:1100:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (E:\workspace\mediainfo\bin\www:7:11)
+    at Module._compile (node:internal/modules/cjs/loader:1198:14) (in app.js:49)
+2023-10-04 14:07:50.979 [error] ReferenceError: musicdb is not defined
+    at main (E:\workspace\mediainfo\app.js:51:20)
+    at Object.<anonymous> (E:\workspace\mediainfo\app.js:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1198:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)
+    at Module.load (node:internal/modules/cjs/loader:1076:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:911:12)
+    at Module.require (node:internal/modules/cjs/loader:1100:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (E:\workspace\mediainfo\bin\www:7:11)
+    at Module._compile (node:internal/modules/cjs/loader:1198:14) (in app.js:55)
+2023-10-04 17:31:51.391 [error] Error level [Error: [IBM][CLI Driver][DB2/LINUXX8664] SQL0204N  "MBSINST.SONG_MST" is an undefined name.  SQLSTATE=42704
+] {
+  error: '[ibm_db] SQL_ERROR',
+  sqlcode: -204,
+  state: '42S02'
+} (in app.js:29)
+2023-10-04 17:34:06.731 [error] Error level TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received an instance of Array
+    at new ReadStream (node:internal/fs/streams:174:5)
+    at Object.createReadStream (node:fs:2916:10)
+    at E:\workspace\mediainfo\node_modules\node-mediainfo\dist\index.js:65:43
+    at new Promise (<anonymous>)
+    at E:\workspace\mediainfo\node_modules\node-mediainfo\dist\index.js:64:47
+    at step (E:\workspace\mediainfo\node_modules\node-mediainfo\dist\index.js:33:23)
+    at Object.next (E:\workspace\mediainfo\node_modules\node-mediainfo\dist\index.js:14:53)
+    at fulfilled (E:\workspace\mediainfo\node_modules\node-mediainfo\dist\index.js:5:58) {
+  code: 'ERR_INVALID_ARG_TYPE'
+} (in app.js:29)
