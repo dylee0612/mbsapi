@@ -1,0 +1,60 @@
+2023-09-19 14:09:06.557 [info] insert into music.com_errorsong 
+    ( REPLY, GENRE, RECEIPT_NO, REG_NO, ERROR_TYPE, SONG_NAME, E_CONTENT, REQ_USERID, REQ_USERNM, REQ_DT, R_CONTENT, REQ_STATUS, PROCESS_USERID, PROCESS_USERNM, PROCESS_DT, TYPE)
+    VALUES 
+    (0,'0',?,?,?,?,?,?,?,?,'처리완료',?,'mbs','mbs',?,'M' ) [
+  '2010013012',
+  '001',
+  '005',
+  '노래제목',
+  '오류내용',
+  's9c3007',
+  '이도용',
+  '20230830121214',
+  '003',
+  '20230830121214'
+] (in error.js:135)
+2023-09-19 17:40:22.576 [info] UPDATE music.song_mst SET (song_name, artist, modr, mod_dt, src_modr, src_mod_dt) 
+    = (?,?,?,?,?,?) 
+    WHERE receipt_no = ? and reg_no = ? [
+  "I'T'`S G'ON SHI'NE1",
+  "도'끼1",
+  'S9C3007',
+  '20230830121210',
+  'S9C3007',
+  '20230830121210',
+  '2011040128',
+  '003'
+] UPDATE music.album_mst SET (modr, mod_dt, src_modr, src_mod_dt) 
+    = (?,?,?,?) 
+    WHERE receipt_no = ? [
+  'S9C3007',
+  '20230830121210',
+  'S9C3007',
+  '20230830121210',
+  '2011040128'
+] (in updatesong.js:36)
+2023-09-19 17:40:37.679 [error] Error level SyntaxError: Unexpected token ? in JSON at position 197
+    at JSON.parse (<anonymous>)
+    at parse (E:\workspace\AIMUSIC_2\node_modules\body-parser\lib\types\json.js:89:19)
+    at E:\workspace\AIMUSIC_2\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\workspace\AIMUSIC_2\node_modules\raw-body\index.js:231:16)
+    at done (E:\workspace\AIMUSIC_2\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (E:\workspace\AIMUSIC_2\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  expose: true,
+  statusCode: 400,
+  status: 400,
+  body: '{\r\n' +
+    '  "receipt_no": "2011040128",\r\n' +
+    '  "reg_no": "003",\r\n' +
+    '  "song_name": "I\'T\'`S G\'ON SHI\'NE1",\r\n' +
+    `  "artist": "도'끼1",\r\n` +
+    `  "attend_artist": "BU'MKE'Y1",\r\n` +
+    '  "modr": "S9C3007",\r\n' +
+    '  "mod_dt": "20230830121210"?\r\n' +
+    '}',
+  type: 'entity.parse.failed'
+} (in app.js:76)

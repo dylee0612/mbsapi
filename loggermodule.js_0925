@@ -1,0 +1,29 @@
+const mkLogger = require('./lib/logger');
+const fs = require('fs');
+const path = require('path');
+
+// logs 폴더 경로
+const logsFolderPath = 'C:/AIMUSIC_2/logs';
+
+// 로그 파일 이름 생성
+const currentDate = new Date().toISOString().slice(0, 10).replace(/-/g, ''); // YYYYMMDD 형식
+const logFileName = `node_app_${currentDate}.log`;
+
+// 로그 파일 전체 경로
+const logFilePath = path.join(logsFolderPath, logFileName);
+
+const loggerOptions = {
+  notification: {
+    "useSMTP": true,
+    "smtpOptions": { "host": "10.10.16.77", "port": 25, "secure": false },
+    "sender": "dylee@sbs.co.kr",
+    "receiver": "dylee@sbs.co.kr",
+    "subjectHeader": "[node_err]"
+  },
+  logLevel: 'info',
+  logFile: logFilePath // logs 폴더 내의 경로로 변경
+};
+
+const loggermodule = mkLogger(loggerOptions);
+
+module.exports = loggermodule;
